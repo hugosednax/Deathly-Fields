@@ -55,7 +55,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_general(sprMapBlock,0, 0, 0, sprite_width, sprite_height, x, y, 1, 1, 45, c_white, c_white, c_white, c_white, 1);
+            <string>draw_sprite_ext(sprMapBlock,image_index,x,y,1,1,45,c_white,1);
 </string>
           </argument>
         </arguments>

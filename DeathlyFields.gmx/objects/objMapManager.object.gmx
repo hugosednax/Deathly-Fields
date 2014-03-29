@@ -28,14 +28,14 @@
             <string>BLOCK_SIZE = 32;
 MAP_WIDTH = 12;
 MAP_HEIGHT = 20;
-MAP_INIT_POSITION_X=room_width/2 - (MAP_WIDTH/2)*BLOCK_SIZE;
-MAP_INIT_POSITION_Y=room_height/2 - (MAP_HEIGHT/2)*BLOCK_SIZE;
-
+MAP_INIT_POSITION_X=room_width/2 - 350;
+MAP_INIT_POSITION_Y=room_height/2 + 80;
+MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
 for(i=0;i&lt;MAP_WIDTH;i++){
     for(j=0;j&lt;MAP_HEIGHT;j++){
         mapContents[i,j]=instance_create(
-                        MAP_INIT_POSITION_X+i*BLOCK_SIZE/2,
-                        MAP_INIT_POSITION_Y+j*BLOCK_SIZE/2+i*BLOCK_SIZE/3,
+                        MAP_INIT_POSITION_X+i*MAP_BLOCK_DISTANCE+j*MAP_BLOCK_DISTANCE,
+                        MAP_INIT_POSITION_Y+i*MAP_BLOCK_DISTANCE-j*MAP_BLOCK_DISTANCE,
                         objMapBlock);
 
     }
