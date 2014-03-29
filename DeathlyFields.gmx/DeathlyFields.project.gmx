@@ -20,6 +20,7 @@
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
     </objects>
+    <object>objects\testeGIT</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
