@@ -9,6 +9,10 @@
     <sprites name="MapElements">
       <sprite>sprites\sprMapBlock</sprite>
       <sprite>sprites\sprMapBlockRed</sprite>
+      <sprite>sprites\sprite2</sprite>
+      <sprite>sprites\Ground</sprite>
+      <sprite>sprites\Mech</sprite>
+      <sprite>sprites\build</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -19,8 +23,12 @@
     </objects>
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
+      <object>objects\resource</object>
     </objects>
-    <object>objects\testeGIT</object>
+    <objects name="units">
+      <object>objects\Buildim</object>
+      <object>objects\Mecha</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

@@ -26,11 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>BLOCK_SIZE = 32;
-MAP_WIDTH = 12;
+MAP_WIDTH = 20;
 MAP_HEIGHT = 20;
-MAP_INIT_POSITION_X=room_width/2 - 350;
-MAP_INIT_POSITION_Y=room_height/2 + 80;
+MAP_INIT_POSITION_X=room_width/2 - 450;
+MAP_INIT_POSITION_Y=room_height/2;
 MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
+
 for(i=0;i&lt;MAP_WIDTH;i++){
     for(j=0;j&lt;MAP_HEIGHT;j++){
         mapContents[i,j]=instance_create(
@@ -39,6 +40,17 @@ for(i=0;i&lt;MAP_WIDTH;i++){
                         objMapBlock);
 
     }
+}
+
+Resource_Location[0]=10;
+Resource_Location[1]=0;
+Resource_Location[2]=20;
+Resource_Location[3]=2;
+Resource_length=array_length_1d(Resource_Location);
+for(i=0;i&lt;Resource_length-2;i+=2){
+        mapContents[Resource_Location[i],Resource_Location[i+1]]=instance_create(MAP_INIT_POSITION_X+Resource_Location[i]*BLOCK_SIZE,
+                        MAP_INIT_POSITION_Y+Resource_Location[i+1]*BLOCK_SIZE,
+                        resource);
 }
 </string>
           </argument>
