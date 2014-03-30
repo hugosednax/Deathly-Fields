@@ -50,7 +50,7 @@ Resource_length=array_length_1d(Resource_Location);
 for(i=0;i&lt;Resource_length-2;i+=2){
         mapContents[Resource_Location[i],Resource_Location[i+1]]=instance_create(MAP_INIT_POSITION_X+Resource_Location[i]*BLOCK_SIZE,
                         MAP_INIT_POSITION_Y+Resource_Location[i+1]*BLOCK_SIZE,
-                        resource);
+                        objresource);
 }
 </string>
           </argument>

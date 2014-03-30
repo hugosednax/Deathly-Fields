@@ -51,7 +51,7 @@
   </views>
   <instances>
     <instance objName="objMapManager" x="0" y="0" name="inst_DF3D3F1C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="resource" x="576" y="256" name="inst_1B4E285F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objresource" x="576" y="256" name="inst_1B4E285F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Mecha" x="448" y="320" name="inst_86780A31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Buildim" x="640" y="352" name="inst_64710C1E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
