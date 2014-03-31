@@ -9,10 +9,11 @@
     <sprites name="MapElements">
       <sprite>sprites\sprMapBlock</sprite>
       <sprite>sprites\sprMapBlockRed</sprite>
-      <sprite>sprites\sprite2</sprite>
       <sprite>sprites\Mech</sprite>
       <sprite>sprites\build</sprite>
       <sprite>sprites\sprGround</sprite>
+      <sprite>sprites\sprGroundDiamond</sprite>
+      <sprite>sprites\sprMapBlockRedDiamong</sprite>
       <sprite>sprites\sprRock</sprite>
     </sprites>
     <sprites name="Cards">
