@@ -31,8 +31,8 @@
 nCardsHand=0;
 
 while(nCardsHand&lt;MAX_CARD_HAND &amp;&amp; objIngameDeck.ingameSize!=0){
-cardFromDeck = nCardsHand;
-CardInHand[nCardsHand]=instance_create(10,10+nCardsHand*145,objIngameDeck.ChosenDeckIngame[cardFromDeck]);
+cardFromDeck = 0;
+CardInHand[nCardsHand]=instance_create(10,10,objIngameDeck.ChosenDeckIngame[cardFromDeck]);
 nCardsHand++;
 objIngameDeck.ingameSize--;
 objIngameDeck.ChosenDeckIngame[cardFromDeck]=-1;
