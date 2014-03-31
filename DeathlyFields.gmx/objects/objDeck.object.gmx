@@ -33,6 +33,7 @@ ChosenDeck[1]=objCard1;
 ChosenDeck[2]=objCard1;
 ChosenDeck[3]=objCard1;
 ChosenDeck[4]=objCard1;
+ChosenDeck[5]=objCard1;
 
 currSize=array_length_1d(ChosenDeck);
 </string>

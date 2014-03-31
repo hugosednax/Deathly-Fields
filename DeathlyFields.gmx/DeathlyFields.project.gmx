@@ -21,6 +21,11 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\GetCardFromDeck.gml</script>
+    <script>scripts\ShuffleDeck.gml</script>
+    <script>scripts\RemoveCardFromDeck.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="Mangers">
       <object>objects\objMapManager</object>
@@ -38,6 +43,7 @@
     </objects>
     <objects name="Cards">
       <object>objects\objCard1</object>
+      <object>objects\objCardParent</object>
     </objects>
     <objects name="Hand">
       <object>objects\objHand</object>
