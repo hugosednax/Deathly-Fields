@@ -1,0 +1,18 @@
+﻿Revert "biscar minor fix, parent object to selectable objs"
+
+This reverts commit 8102776b69e4e223f4be03fc1a86f542e3e2155c.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   DeathlyFields.gmx/DeathlyFields.project.gmx
+#	renamed:    DeathlyFields.gmx/objects/objSelectable.object.gmx -> DeathlyFields.gmx/objects/objCardParent.object.gmx
+#	modified:   DeathlyFields.gmx/objects/objHand.object.gmx
+#	modified:   DeathlyFields.gmx/objects/objMapBlock.object.gmx
+#	modified:   DeathlyFields.gmx/scripts/GetCardFromDeck.gml
+#	modified:   DeathlyFields.gmx/scripts/ShuffleDeck.gml
+#
+

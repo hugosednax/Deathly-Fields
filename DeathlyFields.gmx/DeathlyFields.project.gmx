@@ -52,9 +52,6 @@
     <objects name="Hand">
       <object>objects\objHand</object>
     </objects>
-    <objects name="Selection">
-      <object>objects\objSelectable</object>
-    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
