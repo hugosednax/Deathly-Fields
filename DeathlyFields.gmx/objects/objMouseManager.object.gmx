@@ -25,51 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>BLOCK_SIZE = 32;
-<<<<<<< HEAD
-MAP_WIDTH = 80;
-MAP_HEIGHT = 80;
-MAP_INIT_POSITION_X=room_width/2 - MAP_WIDTH*BLOCK_SIZE/2;
-MAP_INIT_POSITION_Y=room_height/2 - MAP_HEIGHT*BLOCK_SIZE/2;
-=======
-MAP_WIDTH = 60;
-MAP_HEIGHT = 60;
-MAP_INIT_POSITION_X=room_width/2 - MAP_WIDTH * BLOCK_SIZE / 2;
-MAP_INIT_POSITION_Y=room_height/2 - MAP_HEIGHT * BLOCK_SIZE / 2;
->>>>>>> 8102776b69e4e223f4be03fc1a86f542e3e2155c
-MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
-
-for(i=0;i&lt;MAP_WIDTH;i++){
-    for(j=0;j&lt;MAP_HEIGHT;j++){
-        mapContents[i,j]=instance_create(
-<<<<<<< HEAD
-                        MAP_INIT_POSITION_X+i*BLOCK_SIZE/*MAP_BLOCK_DISTANCE+j*MAP_BLOCK_DISTANCE*/,
-                        MAP_INIT_POSITION_Y+j*BLOCK_SIZE/*MAP_BLOCK_DISTANCE-j*MAP_BLOCK_DISTANCE*/,
-=======
-                        MAP_INIT_POSITION_X+i*BLOCK_SIZE,
-                        MAP_INIT_POSITION_Y+j*BLOCK_SIZE,
->>>>>>> 8102776b69e4e223f4be03fc1a86f542e3e2155c
-                        objMapBlock);
-
-    }
-}
-
-Resource_Location[0]=10;
-Resource_Location[1]=0;
-Resource_Location[2]=20;
-Resource_Location[3]=2;
-Resource_length=array_length_1d(Resource_Location);
-for(i=0;i&lt;Resource_length-2;i+=2){
-        mapContents[Resource_Location[i],Resource_Location[i+1]]=instance_create(MAP_INIT_POSITION_X+Resource_Location[i]*BLOCK_SIZE,
-                        MAP_INIT_POSITION_Y+Resource_Location[i+1]*BLOCK_SIZE,
-                        objresource);
-}
+            <string>global.on_click=0;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -86,8 +48,45 @@ for(i=0;i&lt;Resource_length-2;i+=2){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text_color(0,0,"FU",c_white,c_white,c_white,c_white,1)
+            <string>if global.on_click != 0
+{
+with (global.on_click) //points to the object whose ID has been saved
+{
+event_user(0);
+}
+global.on_click = 0 //resets this variable so it's ready for use again
+}
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>514</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_text</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>2</kind>
+            <string>"Id: " + string(global.on_click)</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>50</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

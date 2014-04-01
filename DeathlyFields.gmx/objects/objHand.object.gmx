@@ -26,10 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>MAX_CARD_HAND=5;
-
-
 nCardsHand=0;
 
+GetCardFromDeck();
+
+
+<<<<<<< HEAD
 while(nCardsHand&lt;MAX_CARD_HAND &amp;&amp; objIngameDeck.ingameSize!=0){
 cardFromDeck = nCardsHand;
 CardInHand[nCardsHand]=instance_create(0,10+nCardsHand*(sprite_get_height(Card1)+8),objIngameDeck.ChosenDeckIngame[cardFromDeck]);
@@ -37,6 +39,31 @@ nCardsHand++;
 objIngameDeck.ingameSize--;
 objIngameDeck.ChosenDeckIngame[cardFromDeck]=-1;
 }
+=======
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="56">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>GetCardFromDeck();
+>>>>>>> 8102776b69e4e223f4be03fc1a86f542e3e2155c
 </string>
           </argument>
         </arguments>
