@@ -25,10 +25,13 @@
     <script>scripts\GetCardFromDeck.gml</script>
     <script>scripts\ShuffleDeck.gml</script>
     <script>scripts\RemoveCardFromDeck.gml</script>
+    <script>scripts\clickSelection.gml</script>
+    <script>scripts\drawSprite.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Mangers">
       <object>objects\objMapManager</object>
+      <object>objects\objMouseManager</object>
     </objects>
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
