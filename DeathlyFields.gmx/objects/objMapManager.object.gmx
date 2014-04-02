@@ -34,14 +34,15 @@ MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
 
 for(i=0;i&lt;MAP_WIDTH;i++){
     for(j=0;j&lt;MAP_HEIGHT;j++){
-        mapContents[i,j]=instance_create(
+        mapFog[i,j]="NoVision";
+        mapContents[i,j] = instance_create(
                         MAP_INIT_POSITION_X+i*BLOCK_SIZE,
                         MAP_INIT_POSITION_Y+j*BLOCK_SIZE,
                         objMapBlock);
-
     }
 }
-
+pushMapElement(objUnit,100,100);
+/*
 Resource_Location[0]=10;
 Resource_Location[1]=0;
 Resource_Location[2]=20;
@@ -51,8 +52,50 @@ for(i=0;i&lt;Resource_length-2;i+=2){
         mapContents[Resource_Location[i],Resource_Location[i+1]]=instance_create(MAP_INIT_POSITION_X+Resource_Location[i]*BLOCK_SIZE,
                         MAP_INIT_POSITION_Y+Resource_Location[i+1]*BLOCK_SIZE,
                         objresource);
-}
+}*/
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>drawFog</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>mapContents</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>mapFog</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>MAP_WIDTH</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>MAP_HEIGHT</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

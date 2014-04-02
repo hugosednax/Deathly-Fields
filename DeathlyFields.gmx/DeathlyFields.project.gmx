@@ -15,6 +15,7 @@
       <sprite>sprites\sprGroundDiamond</sprite>
       <sprite>sprites\sprMapBlockRedDiamong</sprite>
       <sprite>sprites\sprRock</sprite>
+      <sprite>sprites\sprFogBlock</sprite>
     </sprites>
     <sprites name="Cards">
       <sprite>sprites\Card1</sprite>
@@ -28,11 +29,14 @@
     <script>scripts\RemoveCardFromDeck.gml</script>
     <script>scripts\clickSelection.gml</script>
     <script>scripts\drawSprite.gml</script>
+    <script>scripts\drawFog.gml</script>
+    <script>scripts\pushMapElement.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Mangers">
       <object>objects\objMapManager</object>
       <object>objects\objMouseManager</object>
+      <object>objects\objDebugPrint</object>
     </objects>
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
