@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,13 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>BLOCK_SIZE = 32;
-MAP_WIDTH = 80;
-MAP_HEIGHT = 80;
-MAP_INIT_POSITION_X=room_width/2 - MAP_WIDTH*BLOCK_SIZE/2;
+            <string>MAP_INIT_POSITION_X=room_width/2 - MAP_WIDTH*BLOCK_SIZE/2;
 MAP_INIT_POSITION_Y=room_height/2 - MAP_HEIGHT*BLOCK_SIZE/2;
 MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
 
+var i,j;
 for(i=0;i&lt;MAP_WIDTH;i++){
     for(j=0;j&lt;MAP_HEIGHT;j++){
         mapFog[i,j]="NoVision";
@@ -39,6 +37,8 @@ for(i=0;i&lt;MAP_WIDTH;i++){
                         MAP_INIT_POSITION_X+i*BLOCK_SIZE,
                         MAP_INIT_POSITION_Y+j*BLOCK_SIZE,
                         objMapBlock);
+        mapContents[i,j].indexX = i;
+        mapContents[i,j].indexY = j;
     }
 }
 pushMapElement(objUnit,100,100);
@@ -87,11 +87,53 @@ for(i=0;i&lt;Resource_length-2;i+=2){
           </argument>
           <argument>
             <kind>0</kind>
-            <string>MAP_WIDTH</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>MAP_HEIGHT</string>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="32">
+      <action>
+        <libid>1</libid>
+        <id>601</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_execute_script</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>9</kind>
+            <script>resetFog</script>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>

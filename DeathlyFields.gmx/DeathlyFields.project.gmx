@@ -24,19 +24,33 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\GetCardFromDeck.gml</script>
-    <script>scripts\ShuffleDeck.gml</script>
-    <script>scripts\RemoveCardFromDeck.gml</script>
-    <script>scripts\clickSelection.gml</script>
-    <script>scripts\drawSprite.gml</script>
-    <script>scripts\drawFog.gml</script>
-    <script>scripts\pushMapElement.gml</script>
+    <scripts name="Fog">
+      <script>scripts\resetFog.gml</script>
+      <script>scripts\drawFog.gml</script>
+    </scripts>
+    <scripts name="Deck">
+      <script>scripts\GetCardFromDeck.gml</script>
+      <script>scripts\ShuffleDeck.gml</script>
+      <script>scripts\RemoveCardFromDeck.gml</script>
+    </scripts>
+    <scripts name="Units">
+      <script>scripts\pushMapElement.gml</script>
+    </scripts>
+    <scripts name="Control">
+      <script>scripts\clickOnFloor.gml</script>
+      <script>scripts\clickSelection.gml</script>
+      <script>scripts\clickToSelect.gml</script>
+    </scripts>
+    <scripts name="Draw">
+      <script>scripts\drawSprite.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Mangers">
       <object>objects\objMapManager</object>
       <object>objects\objMouseManager</object>
       <object>objects\objDebugPrint</object>
+      <object>objects\objSelectionManager</object>
     </objects>
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
@@ -63,6 +77,11 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
+  <constants number="3">
+    <constant name="MAP_WIDTH">80</constant>
+    <constant name="MAP_HEIGHT">80</constant>
+    <constant name="BLOCK_SIZE">32</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
