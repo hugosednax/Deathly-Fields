@@ -32,7 +32,7 @@ MAP_BLOCK_DISTANCE = BLOCK_SIZE/sqrt(2);
 var i,j;
 for(i=0;i&lt;MAP_WIDTH;i++){
     for(j=0;j&lt;MAP_HEIGHT;j++){
-        mapFog[i,j]="NoVision";
+        mapFog[i,j]=0;
         mapContents[i,j] = instance_create(
                         MAP_INIT_POSITION_X+i*BLOCK_SIZE,
                         MAP_INIT_POSITION_Y+j*BLOCK_SIZE,
@@ -42,6 +42,7 @@ for(i=0;i&lt;MAP_WIDTH;i++){
     }
 }
 pushMapElement(objUnit,100,100);
+pushMapElement(objUnit,300,200);
 /*
 Resource_Location[0]=10;
 Resource_Location[1]=0;
@@ -79,11 +80,11 @@ for(i=0;i&lt;Resource_length-2;i+=2){
           </argument>
           <argument>
             <kind>0</kind>
-            <string>mapContents</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>mapFog</string>
+            <string></string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -100,46 +101,20 @@ for(i=0;i&lt;Resource_length-2;i+=2){
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="32">
+    <event eventtype="9" enumb="116">
       <action>
         <libid>1</libid>
-        <id>601</id>
+        <id>331</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
+        <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
+        <functionname>action_restart_game</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>resetFog</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-        </arguments>
       </action>
     </event>
   </events>

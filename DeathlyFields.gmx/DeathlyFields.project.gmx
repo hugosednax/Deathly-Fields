@@ -27,6 +27,8 @@
     <scripts name="Fog">
       <script>scripts\resetFog.gml</script>
       <script>scripts\drawFog.gml</script>
+      <script>scripts\checkAnyNoVision.gml</script>
+      <script>scripts\refreshFog.gml</script>
     </scripts>
     <scripts name="Deck">
       <script>scripts\GetCardFromDeck.gml</script>
@@ -40,6 +42,7 @@
       <script>scripts\clickOnFloor.gml</script>
       <script>scripts\clickSelection.gml</script>
       <script>scripts\clickToSelect.gml</script>
+      <script>scripts\convertIndexToCoordinates.gml</script>
     </scripts>
     <scripts name="Draw">
       <script>scripts\drawSprite.gml</script>
