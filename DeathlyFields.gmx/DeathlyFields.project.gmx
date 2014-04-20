@@ -37,6 +37,8 @@
     </scripts>
     <scripts name="Units">
       <script>scripts\pushMapElement.gml</script>
+      <script>scripts\popMapElement.gml</script>
+      <script>scripts\moveMapElement.gml</script>
     </scripts>
     <scripts name="Control">
       <script>scripts\clickOnFloor.gml</script>
@@ -58,9 +60,9 @@
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
       <object>objects\objresource</object>
-    </objects>
-    <objects name="units">
-      <object>objects\objUnit</object>
+      <objects name="units">
+        <object>objects\objUnit</object>
+      </objects>
     </objects>
     <objects name="Deck">
       <object>objects\objDeck</object>

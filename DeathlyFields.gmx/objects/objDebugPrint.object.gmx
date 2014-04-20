@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>draw_text(400,20,"mouse_x: " + string(mouse_x));
 draw_text(400,40,"mouse_y: " + string(mouse_y));
+draw_text(550,20,"selected: " + string(object_get_name(objSelectionManager.selectedInstance.object_index)));
 </string>
           </argument>
         </arguments>
