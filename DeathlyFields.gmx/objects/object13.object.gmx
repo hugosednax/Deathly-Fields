@@ -25,11 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>print_y = VIEW_HEIGHT - 50;
-print_x = 50;
-draw_text(print_x,print_y,"mouse_x: " + string(mouse_x));
-draw_text(print_x,print_y+20,"mouse_y: " + string(mouse_y));
+            <string>var initX, initY;
+initX = view_xview[0]+VIEW_WIDTH-320;
+initY = view_yview[0];
 
+var prevColor = draw_get_color();
+draw_set_color(c_black);
+draw_rectangle(initX,initY,initX+320,initY+MAP_HEIGHT,0);
+draw_set_color(prevColor);
 </string>
           </argument>
         </arguments>

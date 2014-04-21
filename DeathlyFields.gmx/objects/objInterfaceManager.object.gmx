@@ -25,11 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>print_y = VIEW_HEIGHT - 50;
-print_x = 50;
-draw_text(print_x,print_y,"mouse_x: " + string(mouse_x));
-draw_text(print_x,print_y+20,"mouse_y: " + string(mouse_y));
-
+            <string>
+var prevColor = draw_get_color();
+draw_set_color(c_gray);
+draw_rectangle(VIEW_WIDTH-320,0,VIEW_WIDTH,VIEW_HEIGHT,0);
+draw_set_color(c_black);
+draw_rectangle(VIEW_WIDTH-320,0,VIEW_WIDTH,VIEW_HEIGHT,1);
+draw_set_color(c_black);
+objSel = objSelectionManager.selectedInstance;
+if(objSel != -1){
+    draw_text(VIEW_WIDTH-300,60,objSel.name);
+    if(objSel.sprite_index!=-1){
+        draw_rectangle(VIEW_WIDTH-300,90,VIEW_WIDTH-200,190,1);
+        draw_sprite_ext(objSel.sprite_index,0,VIEW_WIDTH-300,90,100/objSel.sprite_width,100/objSel.sprite_height,0,c_white,1);
+    }
+}
+draw_set_color(prevColor);
 </string>
           </argument>
         </arguments>

@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>selectedInstance = 0;
+            <string>selectedInstance = -1;
 </string>
           </argument>
         </arguments>
