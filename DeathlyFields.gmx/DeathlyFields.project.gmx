@@ -39,12 +39,14 @@
       <script>scripts\pushMapElement.gml</script>
       <script>scripts\popMapElement.gml</script>
       <script>scripts\moveMapElement.gml</script>
+      <script>scripts\unitBasicStats.gml</script>
     </scripts>
     <scripts name="Control">
       <script>scripts\clickOnFloor.gml</script>
       <script>scripts\clickSelection.gml</script>
       <script>scripts\clickToSelect.gml</script>
       <script>scripts\convertIndexToCoordinates.gml</script>
+      <script>scripts\convertCoordinatesToIndex.gml</script>
     </scripts>
     <scripts name="Draw">
       <script>scripts\drawSprite.gml</script>
@@ -56,11 +58,12 @@
       <object>objects\objMouseManager</object>
       <object>objects\objDebugPrint</object>
       <object>objects\objSelectionManager</object>
+      <object>objects\objInterfaceManager</object>
     </objects>
     <objects name="MapElements">
       <object>objects\objMapBlock</object>
       <object>objects\objresource</object>
-      <objects name="units">
+      <objects name="Units">
         <object>objects\objUnit</object>
       </objects>
     </objects>
@@ -82,10 +85,12 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>
-  <constants number="3">
+  <constants number="5">
     <constant name="MAP_WIDTH">80</constant>
     <constant name="MAP_HEIGHT">80</constant>
     <constant name="BLOCK_SIZE">32</constant>
+    <constant name="VIEW_WIDTH">1200</constant>
+    <constant name="VIEW_HEIGHT">700</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
