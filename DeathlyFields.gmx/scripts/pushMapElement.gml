@@ -17,13 +17,34 @@ with(objMapManager){
             mapContents[k,l] = objID;
         }
     }
-    var sight = objID.sight;
-    for(k=initIndexX-sight;k<initIndexX+width+sight && k<MAP_WIDTH;k++){
-        for(l=initIndexY-sight;l<initIndexY+height+sight && l<MAP_HEIGHT;l++){
+    
+    //var sight = objID.sight;
+    var sight =3;
+    var s,a;
+    
+    // meu, almost
+    /*
+    for(s=0;s<=sight;s++){
+        for(k=initIndexX-s;k<MAP_WIDTH && k<=initIndexX+s;k++){
+            l=initIndexY + sqrt(-power((k-initIndexX),2)+power(s,2));
+            mapFog[k,l] += 1;
+        }
+        for(k=initIndexX-s;k<MAP_WIDTH && k<=initIndexX+s;k++){
+            l=initIndexY - sqrt(-power((k-initIndexX),2)+power(s,2));
             mapFog[k,l] += 1;
         }
     }
+    */
+    //internet so com valores grandes tipo 10 é que é bonito
+    for(s=1;s<sight;s++){
+        for(a=0;a<=2*pi;a+=(pi/power(s,2))){
+            k = initIndexX + s *cos(a);
+            l= initIndexY + s *sin(a);
+            mapFog[k,l] += 1;
+            }
+    }
     
+
     objID.mapPositionX = initIndexX;
     objID.mapPositionY = initIndexY;        
 }

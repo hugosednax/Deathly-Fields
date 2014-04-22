@@ -12,12 +12,18 @@ with(objMapManager){
             mapContents[k,l] = 0;
         }
     }
+    
     var sight = objID.sight;
+    for(k=initIndexX-sight;k<MAP_WIDTH && k<initIndexX+sight;k++){
+        l=initIndexY + sqrt(-(initIndexX-1)+sight);
+        mapFog[k,l] += 1;
+    }
+    /*
     for(k=initIndexX-sight;k<initIndexX+width+sight && k<MAP_WIDTH;k++){
         for(l=initIndexY-sight;l<initIndexY+height+sight && l<MAP_HEIGHT;l++){
             mapFog[k,l] -= 1;
         }
-    }
+    }*/
     with(argument0){
         instance_destroy();
     }
