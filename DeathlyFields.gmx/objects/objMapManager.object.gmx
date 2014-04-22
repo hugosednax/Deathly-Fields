@@ -42,7 +42,7 @@ for(i=0;i&lt;MAP_WIDTH;i++){
     }
 }
 pushMapElement(objUnit,100,100);
-pushMapElement(objUnit,300,200);
+//pushMapElement(objUnit,300,200);
 /*
 Resource_Location[0]=10;
 Resource_Location[1]=0;

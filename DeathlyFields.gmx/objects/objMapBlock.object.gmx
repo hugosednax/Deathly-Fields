@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_message(objMapManager.mapFog[indexX,indexY]);
+            <string>show_message("x:" + string(indexX) + " y:" + string(indexY));
 </string>
           </argument>
         </arguments>

@@ -20,29 +20,33 @@ with(objMapManager){
     
     //var sight = objID.sight;
     var sight =3;
-    var s,a;
+    var s,a,ky;
     
     // meu, almost
-    /*
-    for(s=0;s<=sight;s++){
-        for(k=initIndexX-s;k<MAP_WIDTH && k<=initIndexX+s;k++){
-            l=initIndexY + sqrt(-power((k-initIndexX),2)+power(s,2));
-            mapFog[k,l] += 1;
+    
+        for(k=initIndexX-sight;k<MAP_WIDTH && k<=initIndexX+sight;k++){
+            dif = floor(sqrt(sqr(sight)-sqr(k-initIndexX)));
+            l=initIndexY + dif;
+            mapFog[k,l] ++;
+            if(dif!=0){
+                l=initIndexY - dif;
+                mapFog[k,l] ++;
+            }
+            for(ky=initIndexY - dif + 1;ky<=initIndexY+dif-1;ky++){
+                mapFog[k,ky]++;
+            }
         }
-        for(k=initIndexX-s;k<MAP_WIDTH && k<=initIndexX+s;k++){
-            l=initIndexY - sqrt(-power((k-initIndexX),2)+power(s,2));
-            mapFog[k,l] += 1;
-        }
-    }
-    */
+
+    
     //internet so com valores grandes tipo 10 é que é bonito
+    /*
     for(s=1;s<sight;s++){
         for(a=0;a<=2*pi;a+=(pi/power(s,2))){
             k = initIndexX + s *cos(a);
             l= initIndexY + s *sin(a);
             mapFog[k,l] += 1;
             }
-    }
+    }*/
     
 
     objID.mapPositionX = initIndexX;
