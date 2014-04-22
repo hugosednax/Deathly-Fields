@@ -30,28 +30,28 @@ with(objMapManager){
     var ky;
  
         
-    for(k=max(0,initIndexX-sight);k<MAP_WIDTH && k<=min(MAP_WIDTH,initIndexX+sight);k++){
+    for(k=max(0,initIndexX-sight);k<MAP_WIDTH && k<=min(MAP_WIDTH-1,initIndexX+sight);k++){
         dif = floor(sqrt(sqr(sight)-sqr(k-initIndexX)));
-        l=min(MAP_HEIGHT,initIndexY + dif);
+        l=min(MAP_HEIGHT-1,initIndexY + dif);
         mapFog[k,l] --;
         if(dif!=0){
             l=max(0,initIndexY - dif);
             mapFog[k,l] --;
         }
-        for(ky=max(0,initIndexY - dif + 1);ky<=min(MAP_HEIGHT,initIndexY+dif-1);ky++){
+        for(ky=max(0,initIndexY - dif + 1);ky<=min(MAP_HEIGHT-1,initIndexY+dif-1);ky++){
             mapFog[k,ky]--;
         }
     }
     
-     for(k=max(0,newIndexX-sight);k<MAP_WIDTH && k<=min(MAP_WIDTH,newIndexX+sight);k++){
+     for(k=max(0,newIndexX-sight);k<MAP_WIDTH && k<=min(MAP_WIDTH-1,newIndexX+sight);k++){
             dif = floor(sqrt(sqr(sight)-sqr(k-newIndexX)));
-            l=min(MAP_HEIGHT,newIndexY + dif);
+            l=min(MAP_HEIGHT-1,newIndexY + dif);
             mapFog[k,l] ++;
             if(dif!=0){
                 l=max(0,newIndexY - dif);
                 mapFog[k,l] ++;
             }
-            for(ky=max(0,newIndexY - dif + 1);ky<=min(MAP_HEIGHT,newIndexY+dif-1);ky++){
+            for(ky=max(0,newIndexY - dif + 1);ky<=min(MAP_HEIGHT-1,newIndexY+dif-1);ky++){
                 mapFog[k,ky]++;
             }
         }

@@ -41,8 +41,8 @@ for(i=0;i&lt;MAP_WIDTH;i++){
         mapContents[i,j].indexY = j;
     }
 }
-pushMapElement(objUnit,100,100);
-//pushMapElement(objUnit,300,200);
+
+pushMapElement(objUnit,300,200);
 /*
 Resource_Location[0]=10;
 Resource_Location[1]=0;
@@ -88,6 +88,52 @@ view_yview[0]-=20;
 if(keyboard_check(vk_down)){
 view_yview[0]+=20;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="61">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>view_yview[0]+=20;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="60">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>view_yview[0]-=20;
 </string>
           </argument>
         </arguments>
