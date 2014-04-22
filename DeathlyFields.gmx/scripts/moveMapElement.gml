@@ -27,17 +27,34 @@ with(objMapManager){
     }
     
     var sight = objID.sight;
-    for(k=initIndexX-sight;k<initIndexX+width+sight && k<MAP_WIDTH;k++){
-        for(l=initIndexY-sight;l<initIndexY+height+sight && l<MAP_HEIGHT;l++){
-            mapFog[k,l] -= 1;
+    var ky;
+ 
+        
+    for(k=max(0,initIndexX-sight);k<MAP_WIDTH && k<=min(MAP_WIDTH,initIndexX+sight);k++){
+        dif = floor(sqrt(sqr(sight)-sqr(k-initIndexX)));
+        l=min(MAP_HEIGHT,initIndexY + dif);
+        mapFog[k,l] --;
+        if(dif!=0){
+            l=max(0,initIndexY - dif);
+            mapFog[k,l] --;
+        }
+        for(ky=max(0,initIndexY - dif + 1);ky<=min(MAP_HEIGHT,initIndexY+dif-1);ky++){
+            mapFog[k,ky]--;
         }
     }
     
-    for(k=newIndexX-sight;k<newIndexX+width+sight && k<MAP_WIDTH;k++){
-        for(l=newIndexY-sight;l<newIndexY+height+sight && l<MAP_HEIGHT;l++){
-            mapFog[k,l] += 1;
+     for(k=max(0,newIndexX-sight);k<MAP_WIDTH && k<=min(MAP_WIDTH,newIndexX+sight);k++){
+            dif = floor(sqrt(sqr(sight)-sqr(k-newIndexX)));
+            l=min(MAP_HEIGHT,newIndexY + dif);
+            mapFog[k,l] ++;
+            if(dif!=0){
+                l=max(0,newIndexY - dif);
+                mapFog[k,l] ++;
+            }
+            for(ky=max(0,newIndexY - dif + 1);ky<=min(MAP_HEIGHT,newIndexY+dif-1);ky++){
+                mapFog[k,ky]++;
+            }
         }
-    }
     
     argument0.x = argument1;
     argument0.y = argument2;

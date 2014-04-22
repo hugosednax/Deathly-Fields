@@ -18,24 +18,23 @@ with(objMapManager){
         }
     }
     
-    //var sight = objID.sight;
-    var sight =3;
+    var sight = objID.sight;
     var s,a,ky;
     
     // meu, almost
     
-        for(k=initIndexX-sight;k<MAP_WIDTH && k<=initIndexX+sight;k++){
-            dif = floor(sqrt(sqr(sight)-sqr(k-initIndexX)));
-            l=initIndexY + dif;
+    for(k=max(0,initIndexX-sight);k<MAP_WIDTH && k<=min(MAP_WIDTH,initIndexX+sight);k++){
+        dif = floor(sqrt(sqr(sight)-sqr(k-initIndexX)));
+        l=min(MAP_HEIGHT,initIndexY + dif);
+        mapFog[k,l] ++;
+        if(dif!=0){
+            l=max(0,initIndexY - dif);
             mapFog[k,l] ++;
-            if(dif!=0){
-                l=initIndexY - dif;
-                mapFog[k,l] ++;
-            }
-            for(ky=initIndexY - dif + 1;ky<=initIndexY+dif-1;ky++){
-                mapFog[k,ky]++;
-            }
         }
+        for(ky=max(0,initIndexY - dif + 1);ky<=min(MAP_HEIGHT,initIndexY+dif-1);ky++){
+            mapFog[k,ky]++;
+        }
+    }
 
     
     //internet so com valores grandes tipo 10 é que é bonito

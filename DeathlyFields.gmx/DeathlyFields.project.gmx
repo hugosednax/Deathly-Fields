@@ -88,7 +88,7 @@
   <constants number="5">
     <constant name="MAP_WIDTH">80</constant>
     <constant name="MAP_HEIGHT">80</constant>
-    <constant name="BLOCK_SIZE">32</constant>
+    <constant name="BLOCK_SIZE">64</constant>
     <constant name="VIEW_WIDTH">1200</constant>
     <constant name="VIEW_HEIGHT">700</constant>
   </constants>
