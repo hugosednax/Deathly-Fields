@@ -37,7 +37,6 @@
     </scripts>
     <scripts name="Units">
       <script>scripts\pushMapElement.gml</script>
-      <script>scripts\popMapElement.gml</script>
       <script>scripts\moveMapElement.gml</script>
       <script>scripts\unitBasicStats.gml</script>
     </scripts>
